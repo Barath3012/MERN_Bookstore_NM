@@ -26,6 +26,7 @@ const List = ({ subCats, maxPrice, sort, catId }) => {
     
 
     <div className="list">
+      {console.log(books)}
       {isLoading
         ? "loading"
         : books?.map((item) => <Cardb item={item} key={item._id} />)}

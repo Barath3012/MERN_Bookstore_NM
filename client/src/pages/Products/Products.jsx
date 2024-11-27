@@ -133,8 +133,7 @@ const handleSubmitSearch = (e) => {
                 onChange={handleChangeSelect}
                 
               >
-                {isLoading ? "Loading..." : categories?.map((item)=> <MenuItem value={item._id} >{item.name}</MenuItem> )}
-                
+                {isLoading ? "Loading..." : categories?.data?.map((item)=> <MenuItem value={item._id} >{item.name}</MenuItem> )} 
               </Select>
             </FormControl>
           </Box>
@@ -166,7 +165,7 @@ const handleSubmitSearch = (e) => {
           
          
         </div>
-      {/*  <div className="filterItem">
+       <div className="filterItem">
           <h2>Sort by</h2>
           <div className="inputItem">
             <input
@@ -188,7 +187,7 @@ const handleSubmitSearch = (e) => {
             />
             <label htmlFor="desc">Price (Highest first)</label>
           </div>
-        </div>   */}
+        </div>   
       </div>
       <div className="right">
         <img

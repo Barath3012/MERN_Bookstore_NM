@@ -2,7 +2,7 @@ const Book = require('../models/book');
 
 exports.getBooks = async (req, res) => {
     try {
-        const books = await Book.find().populate('category');
+        const books = await Book.find();
         res.json(books);
     } catch (error) {
         res.status(500).json({ message: 'Error getting books' });
